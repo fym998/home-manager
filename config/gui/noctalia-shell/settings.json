@@ -4,7 +4,8 @@
         "customLaunchPrefixEnabled": false,
         "enableClipPreview": true,
         "enableClipboardHistory": true,
-        "pinnedExecs": [],
+        "pinnedExecs": [
+        ],
         "position": "center",
         "sortByMostUsed": true,
         "terminalCommand": "alacritty -e",
@@ -14,7 +15,8 @@
     "audio": {
         "cavaFrameRate": 30,
         "externalMixer": "pwvucontrol || pavucontrol",
-        "mprisBlacklist": [],
+        "mprisBlacklist": [
+        ],
         "preferredPlayer": "",
         "visualizerQuality": "high",
         "visualizerType": "linear",
@@ -29,7 +31,8 @@
         "floating": false,
         "marginHorizontal": 0.25,
         "marginVertical": 0.25,
-        "monitors": [],
+        "monitors": [
+        ],
         "outerCorners": true,
         "position": "bottom",
         "showCapsule": true,
@@ -90,7 +93,8 @@
                     "id": "ScreenRecorder"
                 },
                 {
-                    "blacklist": [],
+                    "blacklist": [
+                    ],
                     "colorizeIcons": false,
                     "drawerEnabled": true,
                     "id": "Tray",
@@ -229,9 +233,11 @@
         "displayMode": "auto_hide",
         "enabled": true,
         "floatingRatio": 1,
-        "monitors": [],
+        "monitors": [
+        ],
         "onlySameOutput": true,
-        "pinnedApps": [],
+        "pinnedApps": [
+        ],
         "radiusRatio": 0.1,
         "size": 1
     },
@@ -291,7 +297,8 @@
         "enabled": true,
         "location": "top_right",
         "lowUrgencyDuration": 3,
-        "monitors": [],
+        "monitors": [
+        ],
         "normalUrgencyDuration": 8,
         "overlayLayer": true,
         "respectExpireTimeout": false
@@ -300,9 +307,11 @@
         "autoHideMs": 2000,
         "backgroundOpacity": 1,
         "enabled": true,
-        "enabledTypes": [],
+        "enabledTypes": [
+        ],
         "location": "top_right",
-        "monitors": [],
+        "monitors": [
+        ],
         "overlayLayer": true
     },
     "screenRecorder": {
