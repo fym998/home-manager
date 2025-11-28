@@ -6,7 +6,7 @@ rec {
       builtins.readDir
       (lib.filterAttrs cond)
       builtins.attrNames
-      (map (name: "${path}/${name}"))
+      (map (name: path + "/${name}"))
     ];
 
   lsSubmoduleWithCond =
