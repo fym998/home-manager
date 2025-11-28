@@ -6,6 +6,9 @@
 
       nil
       nixfmt
+
+      nano
+      tree
       ;
   };
 }
