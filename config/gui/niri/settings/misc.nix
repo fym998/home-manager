@@ -20,7 +20,7 @@
       "GLFW_IM_MODULE" = null;
     };
 
-    screenshot-path = "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png";
+    screenshot-path = "~/Pictures/Screenshots/Screenshot_%Y-%m-%d_%H-%M-%S.png";
     # screenshot-path = null;
   };
 }
