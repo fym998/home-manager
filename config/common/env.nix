@@ -15,7 +15,4 @@
   #
   #  /etc/profiles/per-user/fym/etc/profile.d/hm-session-vars.sh
   #
-  home.sessionVariables = {
-    EDITOR = "nano";
-  };
 }
