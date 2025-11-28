@@ -12,7 +12,7 @@ rec {
       toString path
     );
 
-  mkSymlinkToSourcePath =
+  mkSymlinkToSource =
     let
       mkOutOfStoreSymlink =
         path:
