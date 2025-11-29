@@ -1,4 +1,9 @@
-{ lib, pkgsFrom, ... }:
+{
+  config,
+  lib,
+  pkgsFrom,
+  ...
+}:
 {
   programs.git = {
     enable = true;
@@ -15,7 +20,6 @@
       credential.helper = lib.getExe pkgsFrom.fym998-nur.git-credential-libsecret;
     };
     signing = {
-      key = "0xD7BC265823B30CC1";
       signByDefault = false;
     };
   };
