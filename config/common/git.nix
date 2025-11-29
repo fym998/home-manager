@@ -20,7 +20,7 @@
       credential.helper = lib.getExe pkgsFrom.fym998-nur.git-credential-libsecret;
     };
     signing = {
-      signByDefault = false;
+      signByDefault = true;
     };
   };
 
