@@ -62,7 +62,7 @@
                     "showDiskUsage": false,
                     "showMemoryAsPercent": false,
                     "showMemoryUsage": true,
-                    "showNetworkStats": false,
+                    "showNetworkStats": true,
                     "usePrimaryColor": false
                 },
                 {
