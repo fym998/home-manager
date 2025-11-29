@@ -1,8 +1,6 @@
-{ pkgs, config, ... }:
 {
   services.swayidle = {
     enable = true;
-    package = config.lib.genericLinux.wrapIfEnabled pkgs.swayidle "swayidle";
     timeouts = [
       {
         timeout = 900;
