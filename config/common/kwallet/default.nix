@@ -6,7 +6,7 @@
   ...
 }:
 let
-  enable = true;
+  enable = false;
 in
 lib.mkIf enable {
   home.packages = builtins.attrValues {
