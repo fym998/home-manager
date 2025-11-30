@@ -11,8 +11,9 @@
     };
   };
   home.shellAliases = {
-    "hms" = "home-manager switch";
-    "hmso" = "home-manager switch --option substitute false";
+    "hms" = "home-manager switch -b hmbak";
+    "hmso" = "home-manager switch -b hmbak --option substitute false";
     "hmb" = "home-manager build";
+    "hmbo" = "home-manager build --option substitute false";
   };
 }
