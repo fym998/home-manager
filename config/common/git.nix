@@ -17,7 +17,6 @@
       transfer.fsckobjects = true;
       fetch.fsckobjects = true;
       receive.fsckobjects = true;
-      credential.helper = lib.getExe pkgsFrom.fym998-nur.git-credential-libsecret;
     };
     signing = {
       signByDefault = true;
