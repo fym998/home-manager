@@ -2,6 +2,7 @@
   config,
   pkgs,
   lib,
+  localLib,
   ...
 }:
 let
@@ -18,8 +19,5 @@ lib.mkIf enable {
 
     GIT_ASKPASS = SSH_ASKPASS;
   };
-  xdg.configFile."kwalletrc".text = ''
-    [org.freedesktop.secrets]
-    apiEnabled=true
-  '';
+  xdg.configFile."kwalletrc".source = localLib.mkSymlinkToSource ./kwalletrc;
 }
