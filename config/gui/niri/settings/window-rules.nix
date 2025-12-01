@@ -37,8 +37,15 @@
 
     {
       matches = [
+        { app-id = "Minecraft"; }
+        { app-id = "code"; }
+        { app-id = "firefox"; }
+      ];
+      excludes = [
         {
-          app-id = "Minecraft";
+          # firefox master password / PiP
+          app-id = "firefox";
+          is-floating = true;
         }
       ];
       open-maximized = true;
