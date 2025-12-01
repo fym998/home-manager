@@ -15,4 +15,6 @@
         ${config.lib.shell.export "PATH" (config.lib.shell.prependToVar ":" "PATH" [ "/usr/bin" ])}
         exec ${cmd} $@
       '';
+  lib.genericLinux.getCmd =
+    pkg: cmd: if !config.targets.genericLinux.enable then "${pkg}/bin/${cmd}" else "/usr/bin/${cmd}";
 }

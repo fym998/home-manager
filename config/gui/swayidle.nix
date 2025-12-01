@@ -10,8 +10,8 @@
     let
       qs = config.lib.genericLinux.wrapIfEnabled pkgsFrom.noctalia.default "qs";
       lockScreen = "${lib.getExe qs} -c noctalia-shell ipc call lockScreen lock";
-      niri = config.lib.genericLinux.wrapIfEnabled config.programs.niri.package "niri";
-      powerOffMonitors = "${lib.getExe niri} msg action power-off-monitors";
+      powerOffMonitors = config.lib.genericLinux.getCmd config.programs.niri.package "niri msg action power-off-monitors";
+      sleep = config.lib.genericLinux.getCmd pkgs.systemd "systemctl suspend";
     in
     {
       enable = true;
@@ -22,7 +22,7 @@
         }
         {
           timeout = 1200;
-          command = powerOffMonitors;
+          command = sleep;
         }
       ];
       events = [
