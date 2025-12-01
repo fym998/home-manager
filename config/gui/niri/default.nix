@@ -1,4 +1,5 @@
 {
+  config,
   pkgs,
   localLib,
   inputs,
@@ -11,4 +12,6 @@
   ++ localLib.lsSubmodule ./settings;
 
   programs.niri.package = pkgs.niri;
+
+  home.extraDependencies = [ config.programs.niri.package ];
 }
