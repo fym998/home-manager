@@ -169,8 +169,12 @@
 
     # Screenshots
     "Print".action.screenshot = [ ];
-    "Ctrl+Print".action.screenshot-screen = [ ];
-    "Alt+Print".action.screenshot-window = [ ];
+    "Ctrl+Print".action.screenshot-window = [ ];
+    "Alt+Print".action.screenshot-screen = [ ];
+    ## Laptop
+    "Super+Shift+S".action.screenshot = [ ];
+    "Ctrl+Super+Shift+S".action.screenshot-window = [ ];
+    "Alt+Super+Shift+S".action.screenshot-screen = [ ];
 
     # Inhibitor escape hatch
     "Mod+Escape" = {
