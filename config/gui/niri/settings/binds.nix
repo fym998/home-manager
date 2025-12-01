@@ -10,7 +10,7 @@
       action = spawn "alacritty";
       hotkey-overlay.title = "Open a Terminal: alacritty";
     };
-    "Mod+D" = {
+    "Mod+Space" = {
       action = spawn "fuzzel";
       hotkey-overlay.title = "Run an Application: fuzzel";
     };
