@@ -181,7 +181,7 @@
     # Power off monitors
     "Mod+Shift+P".action = power-off-monitors;
 
-    "Super+Alt+L" = {
+    "Super+L" = {
       action = spawn "swaylock";
       hotkey-overlay.title = "Lock the Screen: swaylock";
     };

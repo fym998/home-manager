@@ -9,8 +9,14 @@
       in
       {
         # Core Noctalia
-        "Mod+S".action = spawn "qs" "-c" "noctalia-shell" "ipc" "call" "controlCenter" "toggle";
-        "Mod+Comma".action = spawn "qs" "-c" "noctalia-shell" "ipc" "call" "settings" "toggle";
+        "Mod+S" = {
+          action = spawn "qs" "-c" "noctalia-shell" "ipc" "call" "controlCenter" "toggle";
+          hotkey-overlay.title = "Noctalia ControlCenter";
+        };
+        "Mod+Comma" = {
+          action = spawn "qs" "-c" "noctalia-shell" "ipc" "call" "settings" "toggle";
+          hotkey-overlay.title = "Noctalia Settings";
+        };
 
         # Audio
         "XF86AudioRaiseVolume" = mkForce {
@@ -59,9 +65,12 @@
         };
 
         # Utilities
-        "Mod+V".action = spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "clipboard";
+        "Mod+V" = {
+          action = spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "calculator";
+          hotkey-overlay.title = "Noctalia Clipboard History";
+        };
         "XF86Calculator".action = spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "calculator";
-        "Mod+L" = mkForce {
+        "Super+L" = mkForce {
           action = spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "lock";
           hotkey-overlay.title = "Lock the Screen";
         };
