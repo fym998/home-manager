@@ -1,0 +1,3 @@
+{
+  globalSection.HiddenNotifications = "";
+}
