@@ -17,22 +17,12 @@
         fcitx5-pinyin-minecraft
         fcitx5-pinyin-zhwiki
       ];
-      settings = {
-        globalOptions = import ./config.nix;
-        inputMethod = import ./profile.nix;
-        addons = lib.pipe ./conf [
-          localLib.lsSubmodule
-          (map (
-            file:
-            lib.nameValuePair (lib.pipe file [
-              toString
-              (lib.removePrefix ((toString ./conf) + "/"))
-              (lib.removeSuffix ".nix")
-            ]) (import file)
-          ))
-          builtins.listToAttrs
-        ];
-      };
     };
   };
+  xdg.configFile = lib.genAttrs' (localLib.lsFileRecursively ./config) (
+    file:
+    lib.nameValuePair "fcitx5/${lib.removePrefix ((toString ./config) + "/") (toString file)}" {
+      source = localLib.mkSymlinkToSource file;
+    }
+  );
 }
