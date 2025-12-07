@@ -9,12 +9,13 @@ rec {
       (map (name: path + "/${name}"))
     ];
 
-  lsSubmoduleWithCond =
-    cond:
-    lsWithCond (
-      n: t:
-      cond n t && (lib.hasSuffix ".nix" n && t == "regular" && n != "default.nix") || t == "directory"
-    );
+  lsFile = lsWithCond (n: t: t == "regular");
 
-  lsSubmodule = lsSubmoduleWithCond (_: _: true);
+  lsDir = lsWithCond (n: t: t == "directory");
+
+  lsFileRecursively = path: lsFile path ++ builtins.concatLists (map lsFileRecursively (lsDir path));
+
+  lsSubmodule = lsWithCond (
+    n: t: (lib.hasSuffix ".nix" n && t == "regular" && n != "default.nix") || t == "directory"
+  );
 }
