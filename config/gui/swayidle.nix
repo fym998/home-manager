@@ -18,10 +18,14 @@
       timeouts = [
         {
           timeout = 900;
-          command = lockScreen;
+          command = powerOffMonitors;
         }
         {
           timeout = 1200;
+          command = lockScreen;
+        }
+        {
+          timeout = 2400;
           command = sleep;
         }
       ];
