@@ -7,7 +7,7 @@
       left = 0;
       right = left;
       top = 0;
-      bottom = 2;
+      bottom = 0;
     };
 
     center-focused-column = "never";
@@ -49,7 +49,7 @@
     };
 
     border = {
-      enable = true;
+      enable = false;
       width = 2;
       active = {
         color = "#7fc8ff";
