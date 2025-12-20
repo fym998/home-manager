@@ -1,4 +1,5 @@
+{ config, lib, ... }:
 {
-  programs.nano.enable = true;
-  home.sessionVariables.EDITOR = "nano";
+  programs.nano.enable = false;
+  home.sessionVariables.EDITOR = lib.mkIf config.programs.nano.enable "nano";
 }
