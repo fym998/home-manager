@@ -7,7 +7,7 @@
     defaultFonts = {
       serif = [ "Noto Serif CJK SC" ];
       sansSerif = [ "Noto Sans CJK SC" ];
-      monospace = [ "MapleMono" ];
+      monospace = [ "Maple Mono NF CN" ];
       emoji = [ "Noto Color Emoji" ];
     };
   };
