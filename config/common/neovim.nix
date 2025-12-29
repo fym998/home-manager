@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   programs.neovim = {
     enable = true;
@@ -8,13 +8,13 @@
       settings = {
         languageserver = {
           nix = {
-            command = pkgs.nil;
+            command = lib.getExe pkgs.nil;
             filetypes = [ "nix" ];
             rootPatterns = [ "flake.nix" ];
             settings = {
               nil = {
                 formatting = {
-                  command = [ pkgs.nixfmt ];
+                  command = [ (lib.getExe pkgs.nixfmt) ];
                 };
               };
             };
