@@ -15,5 +15,6 @@
     "hmso" = "home-manager switch -b hmbak --option substitute false";
     "hmb" = "home-manager build";
     "hmbo" = "home-manager build --option substitute false";
+    "soft-reboot" = "systemctl soft-reboot";
   };
 }
