@@ -2,11 +2,11 @@
 {
   programs.alacritty = {
     enable = true;
-    package = config.lib.genericLinux.nullIfEnable pkgs.alacritty;
+    package = pkgs.alacritty;
     settings = {
       general.import = [ "themes/noctalia.toml" ];
       window = {
-        decorations = "None";
+        #decorations = "None";
         padding = {
           x = 10;
           y = 10;
