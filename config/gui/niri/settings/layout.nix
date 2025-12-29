@@ -2,7 +2,7 @@
   programs.niri.settings.layout = {
     background-color = "transparent";
 
-    gaps = 12;
+    gaps = 0;
     struts = rec {
       left = 0;
       right = left;
@@ -50,9 +50,9 @@
 
     border = {
       enable = false;
-      width = 2;
+      width = .666;
       active = {
-        color = "#7fc8ff";
+        color = "white";
       };
       inactive = {
         color = "#505050";
